@@ -12,7 +12,7 @@ This is a template focused on helping companies self hosting services using Port
 
 1. Login to your portainer setup go to settings
 2. Enable Use external templates
-3. Add the url: `https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json` then go to app templates and hit refresh at the top.
+3. Add the url: `https://raw.githubusercontent.com/nuibits/portainer_templates/master/Template/template.json` then go to app templates and hit refresh at the top.
 ## Contributing
 
 If you wish to contribute make a pull request, create an issue, or email me.
