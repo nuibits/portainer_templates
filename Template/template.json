@@ -444,7 +444,43 @@
       ]
     },
 
-    
+    {
+      "categories": ["Other", "Tools"],
+      "description": "Dokku is a platform as a service based on Docker.",
+      "image": "dokku/dokku:latest",
+      
+      "name": "dokku",
+      "note": "Docker based PaaS",
+      "platform": "linux",
+      "env": [
+        {
+          "name": "DOKKU_HOSTNAME",
+          "label": "DOKKU_HOSTNAME",
+          "default": "dokku.me"
+        }
+          
+      ],
+      "ports": [
+        "3022:22/tcp",
+        "3022:22/udp",
+        "8080:80/udp",
+        "8080:80/tcp",
+        "8443:443/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Pi-Hole",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/var/lib/dokku",
+          "container": "/mnt/dokku"
+        },
+        {
+          "bind": "/var/run/docker.sock",
+          "container": "/var/run/docker.sock"
+        }
+      ]
+    },    
     {
       "categories": ["Other", "Tools"],
       "description": "A Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole.",
