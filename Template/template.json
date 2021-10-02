@@ -184,70 +184,7 @@
       ]
     },
     
-    {
-      "categories": ["HomeAutomation", "Management"],
-      "description": "Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        }
-      ],
-      "image": "linuxserver/domoticz:latest",
-      "logo": "https://github.com/domoticz/domoticz/raw/master/www/images/logo.png",
-      "name": "domoticz",
-      "platform": "linux",
-      "ports": ["1443:1443/tcp", "6144:6144/tcp", "8080:8080/tcp"],
-      "restart_policy": "unless-stopped",
-      "title": "Domoticz",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/Domoticz",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": ["DNS", "Tools"],
-      "description": "Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.",
-      "env": [
-        {
-          "label": "SUBDOMAINS",
-          "name": "SUBDOMAINS",
-          "set": ""
-        },
-        {
-          "label": "TOKEN",
-          "name": "TOKEN",
-          "set": ""
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        }
-      ],
-      "image": "linuxserver/duckdns:latest",
-      "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/duckdns.png",
-      "name": "duckdns",
-      "note": "<b>Configuration</b></br>First, go to duckdns site, register your subdomain and retrieve your token<br/>Then run the docker create command above with your subdomain(s) and token<br/>It will update your IP with the DuckDNS service every 5 minutes",
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "title": "Duck DNS",
-      "type": 1
-    },
+    
     {
       "categories": ["Backup", "Cloud", "Other", "Productivity", "Tools"],
       "description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
@@ -506,36 +443,7 @@
         }
       ]
     },
-    {
-      "categories": ["Other", "Tools"],
-      "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        }
-      ],
-      "image": "organizr/organizr:latest",
-      "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/organizr-icon.png",
-      "name": "organizr-v2",
-      "platform": "linux",
-      "ports": ["80/tcp"],
-      "restart_policy": "unless-stopped",
-      "title": "Organizr",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/Organizr",
-          "container": "/config"
-        }
-      ]
-    },
+
     
     {
       "categories": ["Other", "Tools"],
