@@ -443,7 +443,28 @@
         }
       ]
     },
-
+{
+  "categories": ["Other", "Tools"],
+  "description": "Kuma uptime tool.",
+  "image": "louislam/uptime-kuma:latest",
+  
+  "name": "kuma",
+  "note": "Kuma uptime",
+  "platform": "linux",
+ 
+  "ports": [
+    "3001:3001/tcp"
+  ],
+  "restart_policy": "unless-stopped",
+  "title": "Dokku",
+  "type": 1,
+  "volumes": [
+    {
+      "bind": "uptime-kuma",
+      "container": "/app/data"
+    }
+  ]
+},  
     {
       "categories": ["Other", "Tools"],
       "description": "Dokku is a platform as a service based on Docker.",
@@ -468,7 +489,7 @@
         "8443:443/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "title": "Pi-Hole",
+      "title": "Dokku",
       "type": 1,
       "volumes": [
         {
